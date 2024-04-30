@@ -37,5 +37,28 @@ img {
 }
 
 body {
-  background-color: hwb(0 53% 44%);
+  background-color: #8f8787;
+}
+
+.option1 {
+  color: #560101;
+  font-size: 1.5rem;
+
+}
+
+.select1 {
+  color: #560101;
+  font-size: 1.5rem;
+  background-color: #8f8787;
+}
+
+.option2 {
+  color: #560101;
+  font-size: 1.5rem;
+}
+
+.select2 {
+  color: #560101;
+  font-size: 1.5rem;
+  background-color: #8f8787;
 }

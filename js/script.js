@@ -9,16 +9,19 @@
 /**
  * This function calculates area of a triangle.
  */
-function pickAPzza() {
-  // input
-  const pizzaSize= parseInt(document.getElementById('pizza-Size').value)
-  const toppings = parseInt(document.getElementById('toppings').value)
+document
+  .getElementById("calculateButton")
+  .addEventListener("click", calculateCost)
 
-  // process
-  const pay = (pizzaSize + toppings) * (0.18) ;
-  const taxes = (HoursWorked * HourlyWage) *  0.18 ;
+function calculateCost() {
+  const pizzaSize = document.getElementById("pizzaSizes").value
+  const toppingsCost = parseInt(document.getElementById("toppingsCosts").value)
 
-  // output
-  document.getElementById('pay').innerHTML = `Your pay will be: $ ${pay.toFixed(2)}` ; 
-  document.getElementById('taxes').innerHTML = 'The  goverment will take: $' + taxes.toFixed(2) ; 
+  // Dictionary to store the cost of each pizza size
+  const pizzaSizes = { "Large": 6.0, "Extra Large": 10.0 }
+
+  // Dictionary to store the cost of toppings based on quantity
+  const toppingCosts = { 1: 1.0, 2: 1.75, 3: 2.5, 4: 3.35 }
+  if (pizzaSize == large);
+  document.getElementById()
 }

@@ -28,42 +28,39 @@
         <img src="./images/pizza prices for two size large and extra large ma.jpg" alt="Pizza prices" />
       </div>
       <br />
-      <div class="page-content">pick a pizza size and topping.</div>
+      <div class="page-content">Select pizza size and toppings:</div>
       <br />
-    <!-- Simple Select 1 -->
-    <div class="mdl-textfield mdl-js-textfield getmdl-select">
-        <input type="text" value="" class="mdl-textfield__input" id="pizzaSize" readonly>
-        <input type="hidden" value="" name="pizzaSize">
-        <label for="pizzaSize" class="mdl-textfield__label">Pizza Size</label>
-        <ul for="pizzaSize" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-            <li class="mdl-menu__item" data-val="L">Large $6.00</li>
-            <li class="mdl-menu__item" data-val="XL">Extra Large $10.00</li>
-        </ul>
-    </div>
+      <br />
+      <div class="option1">
+        <label for="pizzaSizes">Pizza Size:</label>
+  <select class="select1" name="pizzaSizes" id="pizzaSizes">
+    <option value="Large">Large $6.00</option>
+    <option value="Extra Large $10.00">Extra Large $10.00</option>
+  </select>
+      </div>
     <br />
-    <br
-    <!-- Select with floating label -->
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
-        <input type="text" value="" class="mdl-textfield__input" id="toppings" readonly>
-        <input type="hidden" value="" name="toppings">
-        <label for="toppings" class="mdl-textfield__label">Toppings</label>
-        <ul for="toppings" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-            <li class="mdl-menu__item" data-val="T1">Topping 1 $1.00</li>
-            <li class="mdl-menu__item" data-val="T2">Topping 2 $1.75</li>
-            <li class="mdl-menu__item" data-val="T3">Topping 3 $2.50</li>
-            <li class="mdl-menu__item" data-val="T4">Topping 4 $3.35</li>
-        </ul>
-    </div>
-        <br />
+    <br />
+    <div class="option2">
+      <label for="toppingsCosts">Toppings:</label>
+  <select class="select2" name="toppingsCosts" id="toppingsCosts">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select></div>
+  <br />
+  <br />
+  <br />
+</form>
         <!-- Accent-colored raised button with ripple -->
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="pickAPzza()" type="button">
+          onclick="calculateCost()" type="button">
           Order Now
         </button>
       </form>
       <br />
       <div class="page-content-answer">
-        <div id="movie-decision"></div>
+        <div id="orderSummary"></div>
       </div>
     </main>
   </div>
