@@ -13,15 +13,15 @@ document
   .getElementById("calculateButton")
   .addEventListener("click", calculateCost)
 
-function calculateCost() {
-  const pizzaSize = document.getElementById("pizzaSizes").value
-  const toppingsCost = parseInt(document.getElementById("toppingsCosts").value)
+function swapper() {
+  toggleClass(document.getElementById("overlay"), "open")
+}
 
-  // Dictionary to store the cost of each pizza size
-  const pizzaSizes = { "Large": 6.0, "Extra Large": 10.0 }
+var el = document.getElementById("overlayBtn")
+el.addEventListener("click", swapper, false)
 
-  // Dictionary to store the cost of toppings based on quantity
-  const toppingCosts = { 1: 1.0, 2: 1.75, 3: 2.5, 4: 3.35 }
-  if (pizzaSize == large);
-  document.getElementById()
+var text = document.getElementById("overlayBtn")
+text.onclick = function () {
+  this.innerHTML = this.innerHTML === "Menu" ? "Close" : "Menu"
+  return false
 }
