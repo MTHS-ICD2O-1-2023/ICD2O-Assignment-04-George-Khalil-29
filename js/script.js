@@ -10,10 +10,13 @@
  * This function calculates area of a triangle.
  */
 function calculateCost(){
-  const pizzaSize = document.getElementById("pizzaSizes").checked
-  const toppingCost = document.getElementById("toppingsCosts").checked
+  const pizzaSizes = document.getElementById("pizzaSizes").value
+  const toppingCost = document.getElementById("toppingsCosts").value
 
-  if (pizzaSize == "Large") {
-    document.getElementById("orderSummary").innerHTML = 'your order is Large pizza $6.00';
+  if (pizzaSizes =="Large" || toppingCost == "1Topping") {
+    document.getElementById("orderSummary").innerHTML = 'your order cost is:';
+  }
+  if (pizzaSizes == "Large" || toppingCost == "2Topping") {
+    document.getElementById("orderSummary").innerHTML = 'Your order cost is:';
   }
 }
