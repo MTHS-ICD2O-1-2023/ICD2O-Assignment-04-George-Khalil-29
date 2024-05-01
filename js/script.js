@@ -9,19 +9,11 @@
 /**
  * This function calculates area of a triangle.
  */
-document
-  .getElementById("calculateButton")
-  .addEventListener("click", calculateCost)
+function calculateCost(){
+  const pizzaSize = document.getElementById("pizzaSizes").checked
+  const toppingCost = document.getElementById("toppingsCosts").checked
 
-function swapper() {
-  toggleClass(document.getElementById("overlay"), "open")
-}
-
-var el = document.getElementById("overlayBtn")
-el.addEventListener("click", swapper, false)
-
-var text = document.getElementById("overlayBtn")
-text.onclick = function () {
-  this.innerHTML = this.innerHTML === "Menu" ? "Close" : "Menu"
-  return false
+  if (pizzaSize == "Large") {
+    document.getElementById("orderSummary").innerHTML = 'your order is Large pizza $6.00';
+  }
 }
