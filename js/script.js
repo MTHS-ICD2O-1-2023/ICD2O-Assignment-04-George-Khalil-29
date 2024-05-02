@@ -9,14 +9,19 @@
 /**
  * This function calculates area of a triangle.
  */
-function calculateCost(){
+function calculateCost() {
   const pizzaSizes = document.getElementById("pizzaSizes").value
-  const toppingCost = document.getElementById("toppingsCosts").value
+  const toppingsCosts = document.getElementById("toppingsCosts").value
 
-  if (pizzaSizes =="Large" || toppingCost == "1Topping") {
-    document.getElementById("orderSummary").innerHTML = 'your order cost is:';
+  const Large1Topping = (6.00 + 1.00) * (1.0 - 0.18)
+   const Large2Topping = (6.0 + 1.75) * (1.0 - 0.18)
+  
+  if (pizzaSizes == "Large" || toppingsCosts == "1Topping") {
+    document.getElementById("Large1Topping").innerHTML =
+      "Your Pay will be:$" + (6.0 + 1.0) * (1.0 - 0.18)
   }
-  if (pizzaSizes == "Large" || toppingCost == "2Topping") {
-    document.getElementById("orderSummary").innerHTML = 'Your order cost is:';
+  else if (pizzaSizes == "Large" || toppingsCosts == "2Topping") {
+    document.getElementById(Large2Topping).innerHTML =
+      "Your pay will be:$" + (6.0 + 1.75) * (1.0 - 1.18)
   }
-}
+ }
