@@ -31,13 +31,20 @@
       <div class="page-content">Select pizza size and toppings:</div>
       <br />
       <br />
-      <div class="option1">
-        <label for="pizzaSizes">Pizza Size:</label>
-  <select class="select1" name="pizzaSizes" id="pizzaSizes">
-    <option value="Large">Large $6.00</option>
-    <option value="Extra Large">Extra Large $10.00</option>
-  </select>
-      </div>
+      <h5>Pizza size</h5>
+      <div id="pizzaSizes">
+      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-large">
+  <input type="radio" id="option-large" class="mdl-radio__button" name="options" value="1" checked>
+  <span class="mdl-radio__label">Large</span>
+</label>
+</div>
+<br />
+<div id="extralarge">
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-extralarge">
+  <input type="radio" id="option-extralarge" class="mdl-radio__button" name="options" value="2">
+  <span class="mdl-radio__label">Extra Large</span>
+</label>
+</div>
     <br />
     <br />
     <div class="option2">
@@ -60,13 +67,7 @@
       <br />
       <br />
       <div class="page-content-answer">
-        <div id="Large1Topping"></div>
-        <div id="Large2Topping"></div>
-        <div id="orderSummary3"></div>
-        <div id="orderSummary4"></div>
-        <div id="orderSummary5"></div>
-        <dic id=""
-      </div>
+        <div id="orderSummary"></div>
     </main>
   </div>
 </body>
