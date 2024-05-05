@@ -10,22 +10,37 @@
  * This function calculates area of a triangle.
  */
 function calculateCost() {
-  const pizzaSizes = document.getElementById("pizzaSizes").checked
-  const extralarge = document.getElementById("extralarge").value;
-  const toppingsCosts = document.getElementById("toppingsCosts").value
+  const pizzaSize = document.getElementById("pizzaSize").value
+  const toppings = parseInt(document.getElementById("toppings").value)
 
-  const orderSummary = (6.0 + 1.0) * (1.0 - 0.13)
+  let baseCost
+  if (pizzaSize === "Large") {
+    baseCost = 6.0
+  } else {
+    baseCost = 10.0
+  }
 
-  if (pizzaSizes == "Large" || toppingsCosts == "1Topping" ) {
-    document.getElementById("orderSummary").innerHTML =
-      "Your pay will be:" + orderSummary + "$"
-  } else if (pizzaSizes == "Large" || toppingsCosts == "2Topping") {
-    document.getElementById("orderSummary").innerHTML =
-      "Your pay will be:" + (6.0 + 1.75) * (1.0 - 0.13) + "$"
-  } else if (pizzaSizes == "Large" || toppingsCosts == "3Topping") {
-    document.getElementById("orderSummary").innerHTML =
-      "Your pay will be:" + (6.0 + 2.5) * (1.0 - 0.13) + "$"
-  } else if (pizzaSizes == "Large" || toppingsCosts == "4Topping") {
-    document.getElementById("orderSummary").innerHTML = "Your pay will be:" + (6.0 + 3.35) * (1.0 - 0.13) +"$"
-  } 
+  let toppingCost
+  if (toppings === 1) {
+    toppingCost = 1.0
+  } else if (toppings === 2) {
+    toppingCost = 1.75
+  } else if (toppings === 3) {
+    toppingCost = 2.5
+  } else if (toppings === 4) {
+    toppingCost = 3.35
+  } else {
+    toppingCost = 0 // No toppings selected
+  }
+
+  const hstRate = 0.13
+  const subtotal = baseCost + toppingCost
+  const tax = subtotal * hstRate
+  const finalCost = subtotal + tax
+
+  document.getElementById("orderSummary").innerHTML = `
+        <p>Subtotal: $${subtotal.toFixed(2)}</p>
+        <p>Tax (HST): $${tax.toFixed(2)}</p>
+        <p>Final Cost: $${finalCost.toFixed(2)}</p>
+      `
 }

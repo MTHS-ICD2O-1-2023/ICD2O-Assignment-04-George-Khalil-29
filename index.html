@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content="Watch a Movie, in JavaScript" />
+  <meta name="description" content="Pizza Order Calculator" />
   <meta name="keywords" content="mths, ics2o" />
   <meta name="author" content="George Khalil" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +12,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   <link rel="manifest" href="site.webmanifest" />
-  <title>Pizza Store</title>
+  <title>Pizza Order Calculator</title>
 </head>
 <body>
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -20,7 +20,7 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Pizza Store</span>
+        <span class="mdl-layout-title">Pizza Order Calculator</span>
       </div>
     </header>
     <main class="mdl-layout__content">
@@ -28,46 +28,40 @@
         <img src="./images/pizza prices for two size large and extra large ma.jpg" alt="Pizza prices" />
       </div>
       <br />
-      <div class="page-content">Select pizza size and toppings:</div>
+      <div class="page-content">Select Pizza Size:</div>
       <br />
       <br />
       <h5>Pizza size</h5>
-      <div id="pizzaSizes">
-      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-large">
-  <input type="radio" id="option-large" class="mdl-radio__button" name="options" value="1" checked>
-  <span class="mdl-radio__label">Large</span>
-</label>
-</div>
-<br />
-<div id="extralarge">
-<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-extralarge">
-  <input type="radio" id="option-extralarge" class="mdl-radio__button" name="options" value="2">
-  <span class="mdl-radio__label">Extra Large</span>
-</label>
-</div>
-    <br />
-    <br />
-    <div class="option2">
-      <label for="toppingsCosts">Toppings:</label>
-  <select class="select2" name="toppingsCosts" id="toppingsCosts">
-    <option value="1Topping">1Topping</option>
-    <option value="2Topping">2Topping</option>
-    <option value="3Topping">3Topping</option>
-    <option value="4Topping">4Topping</option>
-  </select></div>
+<label for="pizzaSize">Select Pizza Size:</label>
+  <select id="pizzaSize">
+    <option value="Large">Large - $6.00</option>
+    <option value="ExtraLarge">Extra Large - $10.00</option>
+  </select><br><br>
+
+  <label for="toppings">Select Number of Toppings:</label>
+  <select id="toppings">
+    <option value="0">No Toppings</option>
+    <option value="1">1 Topping - $1.00</option>
+    <option value="2">2 Toppings - $1.75</option>
+    <option value="3">3 Toppings - $2.50</option>
+    <option value="4">4 Toppings - $3.35</option>
+  </select><br><br>
   <br />
   <br />
   <br />
         <!-- Accent-colored raised button with ripple -->
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
           onclick="calculateCost()" type="button">
-          Order Now
+          Calculate Cost
         </button>
       </form>
       <br />
       <br />
       <div class="page-content-answer">
         <div id="orderSummary"></div>
+        <div id="tax"></div>
+        <div id="finalCost"></div>
+        <div id="subtotal"></div>
     </main>
   </div>
 </body>
